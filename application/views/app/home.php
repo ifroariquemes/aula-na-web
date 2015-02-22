@@ -1,6 +1,6 @@
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="col-md-12 col-sm-12 col-xs-12">
+  
+  <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="container">
     <div class="col-md-12">
         <h2 class="text-primary"> 
@@ -14,15 +14,15 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-6">
-                                <i class="fa fa-calculator fa-5x"></i>
+                                <i class="fa fa-archive fa-5x"></i>
                             </div>
                             <div class="col-xs-6 text-right">
                                 <p class="announcement-heading">&nbsp;</p>
-                                <p class="announcement-text">Math</p>
+                                <p class="announcement-text">Boxes</p>
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="<?=base_url('app/boxes')?>">
                         <div class="panel-footer announcement-bottom">
                             <div class="row">
                                 <div class="col-xs-6">View</div>
@@ -43,7 +43,7 @@
                             </div>
                             <div class="col-xs-6 text-right">
                                 <p class="announcement-heading">&nbsp;</p>
-                                <p class="announcement-text">Language</p>
+                                <p class="announcement-text">Documentos</p>
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-xs-6 text-right">
                                 <p class="announcement-heading">&nbsp;</p>
-                                <p class="announcement-text">Science</p>
+                                <p class="announcement-text">Artigos</p>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="col-xs-6 text-right">
                                 <p class="announcement-heading">&nbsp;</p>
-                                <p class="announcement-text">Video</p>
+                                <p class="announcement-text">Videos</p>
                             </div>
                         </div>
                     </div>
@@ -121,3 +121,9 @@
       </div>
     </div>
 </div>
+<!-- /Main -->
+
+
+
+
+  
