@@ -10,11 +10,12 @@ class Auth extends MY_Controller {
         //$this->load->library('ion_auth');
         $this->load->library('form_validation');
         //$this->load->helper('url');
-
+        
         $this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
         $this->lang->load('auth');
         //$this->load->helper('language');
+        //$this->ion_auth->set_lang('portuguese');
     }
 
     //redirect if needed, otherwise display the user list

@@ -81,7 +81,7 @@ $config['salt_prefix']    = '$2y$';
  | The controller should check this function and act
  | appropriately. If this variable set to 0, there is no maximum.
  */
-$config['site_title']                 = "Aula na Web - Admin";       // Site Title, example.com
+$config['site_title']                 = "Aula na Web";       // Site Title, example.com
 $config['admin_email']                = "no-reply@puongra.com"; // Admin Email, admin@example.com
 $config['default_group']              = 'members';           // Default group, use name
 $config['admin_group']                = 'admin';             // Default administrators group, use name
