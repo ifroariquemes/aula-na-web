@@ -12,6 +12,7 @@ class MY_Controller extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->_array['ulink'] = '?' . http_build_query($_GET, '', "&");
+        $this->data['user'] = $this->ion_auth->user()->row();
     }
 
     /*

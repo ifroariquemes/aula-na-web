@@ -26,9 +26,9 @@
         
         <li class="dropdown">
           <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
-            <i class="glyphicon glyphicon-user"></i> <?=$user->username?> <span class="caret"></span></a>
+            <i class="glyphicon glyphicon-user"></i> <?=$user->first_name?> <span class="caret"></span></a>
           <ul id="g-account-menu" class="dropdown-menu" role="menu">
-            <li><a href="#">My Profile</a></li>
+            <li><a href="<?=base_url('auth/edit_user/'.$user->id)?>">Meu Perfil</a></li>
             <li><a href="<?=base_url('auth/logout')?>"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
           </ul>
         </li>

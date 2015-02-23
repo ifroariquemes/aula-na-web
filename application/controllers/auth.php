@@ -556,7 +556,7 @@ class Auth extends MY_Controller {
             'type' => 'password'
         );
 
-        $this->render_empty('auth/edit_user');
+        $this->render('auth/b_edit_user');
     }
 
     // create a new group

@@ -8,7 +8,6 @@ class App extends MY_Controller {
             //redirect them to the login page
             redirect('auth/login', 'refresh');
         }
-        $this->data['user'] = $this->ion_auth->user()->row();
     }
 
     public function index() {
