@@ -7,16 +7,12 @@ class MY_Controller extends CI_Controller {
         'message' => 'Não foi possível realizar esta operação!',
         'data' => ''
     );
-    public $_array = array();
+    public $data = array();
 
     public function __construct() {
         parent::__construct();
         $this->_array['ulink'] = '?' . http_build_query($_GET, '', "&");
-
-        if (!$this->ion_auth->logged_in()) {
-            //redirect them to the login page
-            redirect('auth/login', 'refresh');
-        }
+        $this->data['user'] = $this->ion_auth->user()->row();
     }
 
     /*
@@ -24,8 +20,14 @@ class MY_Controller extends CI_Controller {
      */
 
     public function render($view) {
-        $this->load->view("components/head");
-        $this->load->view($view, $this->_array);
+        $this->load->view("components/head",$this->data);
+        $this->load->view($view);
+        $this->load->view("components/foot");
+    }
+    
+    public function render_empty($view) {
+        $this->load->view("components/head_empty",$this->data);
+        $this->load->view($view);
         $this->load->view("components/foot");
     }
 

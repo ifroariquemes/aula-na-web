@@ -9,3 +9,5 @@
     RewriteRule ^(.*)$ index.php/$1 [L]
 
 </IfModule>
+# Habilitar o PHP 5.3
+AddType application/x-httpd-php53 .php 

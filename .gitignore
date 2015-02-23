@@ -32,7 +32,7 @@ nb-configuration.xml
 
 
 ### CodeIgniter ###
-#*/config/development
+*/config/production
 */logs/log-*.php
 */logs/!index.html
 */cache/*
