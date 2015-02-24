@@ -18,11 +18,11 @@
                             </div>
                             <div class="col-xs-6 text-right">
                                 <p class="announcement-heading">&nbsp;</p>
-                                <p class="announcement-text">Boxes</p>
+                                <p class="announcement-text">Canais</p>
                             </div>
                         </div>
                     </div>
-                    <a href="<?=base_url('app/boxes')?>">
+                    <a href="<?=base_url('canais')?>">
                         <div class="panel-footer announcement-bottom">
                             <div class="row">
                                 <div class="col-xs-6">View</div>
