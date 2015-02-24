@@ -256,7 +256,7 @@ class Auth extends MY_Controller {
                 $this->data['code'] = $code;
 
                 //render
-                $this->render_empty('auth/reset_password');
+                $this->render_empty('auth/b_reset_password');
             } else {
                 // do we have a valid request?
                 if ($this->_valid_csrf_nonce() === FALSE || $user->id != $this->input->post('user_id')) {

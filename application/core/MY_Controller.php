@@ -7,12 +7,20 @@ class MY_Controller extends CI_Controller {
         'message' => 'Não foi possível realizar esta operação!',
         'data' => ''
     );
-    public $data = array();
+    public $data = array(
+        "resposta" => array(
+            'error' => 1,
+            'message' => 'Não foi possível realizar esta operação!',
+            'data' => ''
+        )
+    );
+    public $user = null;
 
     public function __construct() {
         parent::__construct();
-        $this->_array['ulink'] = '?' . http_build_query($_GET, '', "&");
-        $this->data['user'] = $this->ion_auth->user()->row();
+        $this->data['ulink'] = '?' . http_build_query($_GET, '', "&");
+        $this->user = $this->ion_auth->user()->row();
+        $this->data['user'] = $this->user;
     }
 
     /*
@@ -20,13 +28,13 @@ class MY_Controller extends CI_Controller {
      */
 
     public function render($view) {
-        $this->load->view("components/head",$this->data);
+        $this->load->view("components/head", $this->data);
         $this->load->view($view);
         $this->load->view("components/foot");
     }
-    
+
     public function render_empty($view) {
-        $this->load->view("components/head_empty",$this->data);
+        $this->load->view("components/head_empty", $this->data);
         $this->load->view($view);
         $this->load->view("components/foot");
     }
@@ -49,4 +57,5 @@ class MY_Controller extends CI_Controller {
         }
         return $obj;
     }
+
 }
