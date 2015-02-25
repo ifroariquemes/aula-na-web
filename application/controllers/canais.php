@@ -51,5 +51,10 @@ class Canais extends MY_Controller {
     public function add_item_sumario(){
         $this->render("canais/add_item_sumario");
     }
+    
+    public function busca(){
+        $this->data['termo'] = $this->input->get('termo');
+        $this->render("canais/busca");
+    }
 
 }

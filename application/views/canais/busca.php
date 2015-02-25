@@ -30,7 +30,7 @@
                         </ul>
                     </li>
                 </ul>
-                <form action="<?=base_url('canais/busca')?>" class="navbar-form navbar-left" role="search">
+                <form action="<?=base_url('canais/busca'.$termo)?>" class="navbar-form navbar-left" role="search">
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-search"></i></span>
