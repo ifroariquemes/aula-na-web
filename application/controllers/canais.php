@@ -1,5 +1,7 @@
 <?php
-
+/*Tópicos
+ * Cada turma deverá desenvolver seu sumário?
+ */
 class Canais extends MY_Controller {
 
     
@@ -44,6 +46,10 @@ class Canais extends MY_Controller {
     
     public function sumario($oid = null, $global = FALSE){
         $this->render("canais/sumario");
+    }
+    
+    public function add_item_sumario(){
+        $this->render("canais/add_item_sumario");
     }
 
 }

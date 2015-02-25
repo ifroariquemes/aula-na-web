@@ -16,6 +16,38 @@
         width: 14em;
     }
 </style>
+<style>
+    /* Blue Flat Button
+==================================================*/
+.btn-sm{
+  position: relative;
+  vertical-align: center;
+  margin: 0px;
+  height: 100x;
+  padding: 15px 15px;
+  font-size: 4px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  background: #62b1d0;
+  border: 0;
+  border-bottom: 3px solid #9FE8EF;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -3px #9FE8EF;
+  box-shadow: inset 0 -3px #9FE8EF;
+}
+
+.btn-sm:active {
+  top: 2px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-sm:hover {
+  background: #45E1E8;
+}
+
+</style>
 <!-- Main -->
 <div class="container">
 
@@ -41,7 +73,8 @@
         </div><!-- /span-3 -->
         <div class="col-md-9">   	
             <!-- column 2 -->	
-            <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>     
+            <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Sumário Individual</strong></a>
+            <a href="<?=base_url("canais/add_item_sumario/".$this->uri->segment(3))?>" class="btn btn-default btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
             <hr>
             <div class="row">
                 <!-- center left-->	
@@ -54,7 +87,12 @@
                                     <p class="list-group-item-text">Load your data from a div.</p>
                                 </div>
                                 <div class="col-md-3">
-                                    <img src="http://placehold.it/40/8e44ad/FFF&text=B" alt="" class="" />
+                                    <div class="btn-group pull-right" role="group" aria-label="Default button group">
+                                        <button type="button" class="btn btn-sm"><i class="fa fa-chevron-down fa-4x" ></i></button>
+                                        <button type="button" class="btn btn-sm"><i class="fa fa-chevron-up fa-4x" ></i></button>
+                                        <button type="button" class="btn btn-sm"><i class="fa fa-trash fa-4x" ></i></button>
+                                    </div>
+                                    <!--<img src="http://placehold.it/40/8e44ad/FFF&text=B" alt="" class="" />-->
                                 </div>
                             </div>
                         </a>                        

@@ -1,5 +1,5 @@
 <?php
-
+//um só caminho
 class Site extends MY_Controller {
 
     public function __construct() {
