@@ -80,22 +80,27 @@
                 <!-- center left-->	
                 <div class="col-md-12">
                     <div class="list-group wizard-menu">
-                        <a href="#" class="list-group-item step-1-menu" data-for=".step-1">
+                        <?php foreach($temas as $tema){ ?>
+                        <div class="list-group-item step-1-menu" data-for=".step-1">      
                             <div class="row">
+                                <a href="#">
                                 <div class="col-md-9">
-                                    <h4 class="list-group-item-heading">1. Load from DIV</h4>
-                                    <p class="list-group-item-text">Load your data from a div.</p>
+                                    <h4 class="list-group-item-heading"><?=$tema['titulo']?></h4>
+                                    <p class="list-group-item-text"><?=$tema['created']?></p>
                                 </div>
-                                <div class="col-md-3">
+                                </a>
+                                <div class="col-md-3">                                   
                                     <div class="btn-group pull-right" role="group" aria-label="Default button group">
-                                        <button type="button" class="btn btn-sm"><i class="fa fa-chevron-down fa-4x" ></i></button>
-                                        <button type="button" class="btn btn-sm"><i class="fa fa-chevron-up fa-4x" ></i></button>
-                                        <button type="button" class="btn btn-sm"><i class="fa fa-trash fa-4x" ></i></button>
+                                        <a href="<?=base_url(uri_string()."/".$tema['id']."?down");?>" class="btn btn-sm"><i class="fa fa-chevron-down fa-4x" ></i></a>
+                                        <a href="<?=base_url(uri_string()."/".$tema['id']."?up");?>" class="btn btn-sm"><i class="fa fa-chevron-up fa-4x" ></i></a>
+                                        <a href="#" class="btn btn-sm"><i class="fa fa-trash fa-4x" ></i></a>
+                                        
                                     </div>
                                     <!--<img src="http://placehold.it/40/8e44ad/FFF&text=B" alt="" class="" />-->
                                 </div>
-                            </div>
-                        </a>                        
+                            </div>                          
+                        </div>
+                         <?php } ?>
                         <a href="#" class="list-group-item step-2-menu" data-for=".step-2">
                             <h4 class="list-group-item-heading">2. Load from DIV</h4>
                             <p class="list-group-item-text">Load your data from a div.</p>
